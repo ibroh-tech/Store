@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CheckIn1.css' %}">
+  </head>
+  <body>
+    <div class="step">
+      <div class="header-top">
+        <div class="logo"><img class="img" src="img/logo-2.svg" /></div>
+        <div class="navbar">
+          <div class="div">Home</div>
+          <div class="text-wrapper-2">About</div>
+          <div class="text-wrapper-2">Contact Us</div>
+          <div class="text-wrapper-2">Blog</div>
+        </div>
+        <div class="icons">
+          <img class="img-3" src="img/favorites.svg" />
+          <div class="icon-cart"><img class="cart" src="img/cart-1.svg" /></div>
+          <img class="img-3" src="img/user.svg" />
+        </div>
+      </div>
+      <div class="steps">
+        <div class="div-2">
+          <img class="img-2" src="img/location.svg" />
+          <div class="text">
+            <div class="text-wrapper-3">Step 1</div>
+            <div class="text-wrapper-4">Address</div>
+          </div>
+        </div>
+        <div class="div-2">
+          <img class="img-2" src="img/shipping.svg" />
+          <div class="text">
+            <div class="text-wrapper-5">Step 2</div>
+            <div class="text-wrapper-6">Shipping</div>
+          </div>
+        </div>
+        <div class="div-2">
+          <img class="img-2" src="img/payment.svg" />
+          <div class="text">
+            <div class="text-wrapper-5">Step 3</div>
+            <div class="text-wrapper-6">Payment</div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="frame">
+          <div class="block">
+            <div class="shipping-method">Select Address</div>
+            <div class="block-2">
+              <div class="addresses-radiogroup">
+                <div class="address-home">
+                  <div class="content-2">
+                    <div class="top">
+                      <div class="div-3">
+                        <div class="div-4"><div class="check"></div></div>
+                        <div class="text-wrapper-7">Mirzo Ulugbek 91</div>
+                      </div>
+                      <div class="tag"><div class="text-wrapper-8">HOME</div></div>
+                    </div>
+                    <div class="info">
+                      <div class="the-gently-curved">Tashkent Mirzo Ulugbek 91</div>
+                      <div class="contact"></div>
+                    </div>
+                  </div>
+                  <div class="actions">
+                    <div class="img-2"><img class="subtract" src="img/image.svg" /></div>
+                    <img class="img-2" src="img/close.svg" />
+                  </div>
+                </div>
+                <div class="address-home">
+                  <div class="content-2">
+                    <div class="top">
+                      <div class="div-3">
+                        <div class="div-4"></div>
+                        <div class="text-wrapper-7">Agrobank</div>
+                      </div>
+                      <div class="tag"><div class="text-wrapper-8">OFFICE</div></div>
+                    </div>
+                    <div class="info">
+                      <p class="the-gently-curved">8793+CFR, Батыра Закирова улица, Ташкент, Tashkent, Узбекистан</p>
+                      <div class="contact"></div>
+                    </div>
+                  </div>
+                  <div class="actions">
+                    <div class="img-2"><img class="subtract" src="img/subtract.svg" /></div>
+                    <img class="img-2" src="img/close.svg" />
+                  </div>
+                </div>
+              </div>
+              <div class="add-new-line">
+                <div class="line-icon">
+                  <img class="line" src="img/line.svg" />
+                  <div class="icon-plus"></div>
+                  <img class="line" src="img/line-2.svg" />
+                </div>
+                <div class="text-wrapper-9">Add New Address</div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <a href="{% url 'homepage:cart' %}" class="button">
+              <div class="label">Back</div>
+            </a>
+            <a href="{% url 'homepage:checkout2' %}" class="label-wrapper">
+              <div class="label-2">Next</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="info-2">
+          <div class="logo-text">
+            <div class="logo-wrapper"><img class="img" src="img/logo.svg" /></div>
+            <p class="p">
+              We are a residential interior design firm located in Portland. Our boutique-studio offers more than
+            </p>
+          </div>
+          <div class="footer-navigation">
+            <div class="section">
+              <div class="text-wrapper-10">Services</div>
+              <div class="text-wrapper-11">Bonus program</div>
+              <div class="text-wrapper-11">Gift cards</div>
+              <div class="text-wrapper-11">Credit and payment</div>
+              <div class="text-wrapper-11">Service contracts</div>
+              <div class="text-wrapper-11">Non-cash account</div>
+              <div class="text-wrapper-11">Payment</div>
+            </div>
+            <div class="section">
+              <div class="text-wrapper-10">Assistance to the buyer</div>
+              <div class="text-wrapper-11">Find an order</div>
+              <div class="text-wrapper-11">Terms of delivery</div>
+              <p class="text-wrapper-11">Exchange and return of goods</p>
+              <div class="text-wrapper-11">Guarantee</div>
+              <div class="text-wrapper-11">Frequently asked questions</div>
+              <p class="text-wrapper-11">Terms of use of the site</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <img class="img-4" src="img/twitter.svg" />
+          <img class="img-4" src="img/facebook.svg" />
+          <img class="img-4" src="img/tiktok.svg" />
+          <img class="img-4" src="img/instagram.svg" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

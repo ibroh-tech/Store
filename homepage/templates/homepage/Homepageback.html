@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Homepage.css' %}">
+  </head>
+  <body>
+  <ul>
+    {% for product in products %}
+    <li>
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p>Price: ${{ product.price }}</p>
+      <form action="{% url 'homepage:add_to_cart' product.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Add to Cart</button>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+  </ul>
+    <div class="home">
+      <div class="header-top">
+        <div class="logo">
+          <a href="index.html">
+            <img class="img" src="img/logo.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="navbar">
+          <a href="{% url 'homepage:home' %}" class="div">Home</a>
+          <a href="{% url 'homepage:catalog' %}" class="text-wrapper-2">Catalog</a>
+          <div class="text-wrapper-2">Contact Us</div>
+          <div class="text-wrapper-2">About Us</div>
+        </div>
+        <div class="icons">
+          <a href="favorites.html">
+            <img class="img" src="static/favorites.svg" alt="favorites">
+          </a>
+          <a href="{% url 'homepage:cart' %}" class="icon-cart">
+            <img class="img" src="{% static 'cart.svg' %}" alt="cart">
+          </a>
+          <a href="{% url 'homepage:signup' %}">
+            <img class="img" src="{% static 'user.svg' %}" alt="user">
+          </a>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="content">
+          <div class="titles">
+            <div class="text-wrapper-3">Pro.Beyond.</div>
+            <p class="iphone-pro"><span class="span">IPhone 14 </span> <span class="text-wrapper-4">Pro</span></p>
+          </div>
+          <p class="p">Created to change everything for the better. For everyone</p>
+          <a href="{% url 'homepage:productdetails' %}" class="button">
+            <div class="label">Shop Now</div>
+          </a>
+        </div>
+        <div class="iphone-image">
+          <img class="iphone-image-2" src="{% static 'Iphone Image.png' %}" />
+        </div>
+      </div>
+      <div class="div-2">
+        <div class="left-banners">
+          <div class="wide-square">
+            <img class="img" src="{% static 'PlayStation.png' %}" alt="playstation">
+            <div class="title-text">
+              <div class="text-wrapper-5">Playstation 5</div>
+              <p class="text-wrapper-6">
+                Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation
+                experience.
+              </p>
+            </div>
+          </div>
+          <div class="squares">
+            <div class="square-banner">
+              <div class="title-text-2">
+                <p class="apple-airpods-max">
+                  <span class="text-wrapper-7">Apple <br />AirPods </span> <span class="text-wrapper-8">Max</span>
+                </p>
+                <p class="computational-audio">Computational audio. Listen, it&#39;s powerful</p>
+              </div>
+              <img class="hero" src="{% static 'hero__gnfk5g59t0qe_xlarge_2x 1.png'%}" />
+            </div>
+            <div class="square-banner-2">
+              <div class="title-text-3">
+                <p class="apple-vision-pro">
+                  <span class="text-wrapper-7">Apple <br />Vision </span> <span class="text-wrapper-8">Pro</span>
+                </p>
+                <p class="text-wrapper-9">An immersive way to experience entertainment</p>
+              </div>
+              <img class="image" src="{% static 'image 36.png' %}" />
+            </div>
+          </div>
+        </div>
+        <div class="big-banner">
+          <div class="content-2">
+            <div class="div-3">
+              <p class="macbook-air">
+                <span class="text-wrapper-10">Macbook </span> <span class="text-wrapper-8">Air</span>
+              </p>
+              <p class="text-wrapper-6">
+                The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.
+              </p>
+            </div>
+            <a href="{% url 'homepage:catalog' %}" class="label-wrapper">
+              <div class="label-2">Shop Now</div>
+            </a>
+          </div>
+          <div class="macbook-pro">
+            <img class="mac-back" src="{% static 'mac back1.png'%} " />
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="top">
+          <div class="text-wrapper-11">Browse By Category</div>
+          <div class="arrow-s">
+            <img class="img-2" src="{% static 'Arrow left.svg'%} " /> <img class="img-2" src="{% static 'Arrow.svg'%} " />
+          </div>
+        </div>
+        <div class="categories">
+          <a  href="{% url 'homepage:catalog'%}"  class="category-card">
+            <img class="img-3" src="{% static 'Phones.svg' %}" />
+            <div class="text-wrapper-12">Phones</div>
+          </a>
+          <a  href="{% url 'homepage:catalog'%}"  class="category-card">
+            <img class="img-3" src="{% static 'Smart Watches.svg' %}" />
+            <div class="text-wrapper-13">Smart Watches</div>
+          </a>
+          <a  href="{% url 'homepage:catalog'%}"  class="category-card">
+            <img class="img-3" src="{% static 'Cameras.svg'%}" />
+            <div class="text-wrapper-14">Cameras</div>
+          </a>
+          <a  href="{% url 'homepage:catalog'%}"  class="category-card">
+            <img class="img-3" src="{% static 'Headphones.svg'%}" />
+            <div class="text-wrapper-15">Headphones</div>
+          </a>
+          <a  href="{% url 'homepage:catalog'%}"  class="category-card">
+            <img class="img-3" src="{% static 'Computers.svg' %}" />
+            <div class="text-wrapper-16">Computers</div>
+          </a>
+          <a  href="{% url 'homepage:catalog'%}"  class="category-card">
+            <img class="img-3" src="{% static 'Gaming.svg'%}" />
+            <div class="text-wrapper-17">Gaming</div>
+          </a>
+        </div>
+      </div>
+      <div class="products">
+        <div class="tags">
+          <div class="selected">
+            <div class="text-wrapper-18">New Arrival</div>
+            <img class="line" src="{% static 'Line.svg'%}" />
+          </div>
+          <div class="text-wrapper-19">Bestseller</div>
+          <div class="text-wrapper-20">Featured Products</div>
+        </div>
+        <div class="div-3">
+          <div class="row">
+            <div class="product-card">
+              <div class="top-section"><div class="icon-like"></div></div>
+              <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+              <div class="text-icon">
+                <div class="div-3">
+                  <p class="apple-iphone-pro">Apple iPhone 14 Pro Max 128GB Deep Purple</p>
+                  <div class="element">$900</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="top-section"><div class="icon-px-like"></div></div>
+              <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+              <div class="text-icon">
+                <div class="div-3">
+                  <p class="apple-iphone-pro">Blackmagic Pocket Cinema Camera 6k</p>
+                  <div class="element">$2535</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="top-section"><div class="icon-px-like"></div></div>
+              <img class="iphone-pro-2" src="{% static 'Smartwatch.svg'%}" />
+              <div class="text-icon">
+                <div class="div-3">
+                  <p class="apple-iphone-pro">Apple Watch Series 9 GPS 41mm Starlight Aluminium</p>
+                  <div class="element">$399</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="top-section"><div class="icon-like-2"></div></div>
+              <img class="iphone-pro-2" src="{% static 'AirPods Max.png'%} " />
+              <div class="text-icon">
+                <div class="div-3">
+                  <div class="apple-iphone-pro">AirPods Max Silver<br />Starlight Aluminium</div>
+                  <div class="element">$549</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="product-card">
+              <div class="top-section"><div class="icon-like-3"></div></div>
+              <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+              <div class="text-icon">
+                <div class="div-3">
+                  <p class="apple-iphone-pro">Samsung Galaxy Watch6 Classic 47mm Black</p>
+                  <div class="element">$369</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="top-section"><div class="icon-like-4"></div></div>
+              <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+              <div class="text-icon">
+                <div class="div-3">
+                  <p class="apple-iphone-pro">Galaxy Z Fold5 Unlocked | 256GB | Phantom Black</p>
+                  <div class="element">$1799</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="top-section"><div class="icon-like-5"></div></div>
+              <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+              <div class="text-icon">
+                <div class="div-3">
+                  <div class="apple-iphone-pro">Galaxy Buds FE<br />Graphite</div>
+                  <div class="element">$99.99</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="top-section"><div class="icon-like-6"></div></div>
+              <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+              <div class="text-icon">
+                <div class="div-3">
+                  <p class="apple-iphone-pro">Apple iPad 9 10.2&#34; 64GB Wi-Fi Silver (MK2L3) 2021</p>
+                  <div class="element">$398</div>
+                </div>
+                <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-2">
+        <div class="big-banner-2">
+          <div class="title-text-4">
+            <div class="text-wrapper-21">Popular Products</div>
+            <p class="text-wrapper-6">
+              iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of
+              use.
+            </p>
+            <button class="label-wrapper"><div class="label-2">Shop Now</div></button>
+          </div>
+          <div class="group">
+            <div class="overlap-group">
+              <img class="image-2" src="{% static 'image 12.svg'%}" />
+            </div>
+          </div>
+        </div>
+        <div class="big-banner-3">
+          <div class="title-text-4">
+            <div class="text-wrapper-21">Ipad Pro</div>
+            <p class="text-wrapper-6">
+              iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of
+              use.
+            </p>
+            <button class="label-wrapper"><div class="label-2">Shop Now</div></button>
+          </div>
+          <img class="image-3" src="{% static 'Iphone 16.webp'%}" />
+        </div>
+        <div class="big-banner-4">
+          <div class="title-text-4">
+            <div class="text-wrapper-21">Samsung Galaxy</div>
+            <p class="text-wrapper-6">
+              iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of
+              use.
+            </p>
+            <button class="label-wrapper"><div class="label-2">Shop Now</div></button>
+          </div>
+          <img class="image-4" src="{% static 'image 41.svg'%}" />
+        </div>
+        <div class="big-banner-5">
+          <div class="title-text-4">
+            <div class="text-wrapper-22">Macbook Pro</div>
+            <p class="text-wrapper-6">
+              iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of
+              use.
+            </p>
+            <button class="button"><div class="label">Shop Now</div></button>
+          </div>
+          <img class="macbook" src="{% static 'Xiaomi.png'%}" />
+        </div>
+      </div>
+      <div class="discount-products">
+        <div class="text-wrapper-23">Discounts up to -50%</div>
+        <div class="row">
+          <div class="product-card">
+            <div class="top-section"><div class="icon-like-3"></div></div>
+            <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+            <div class="text-icon">
+              <div class="div-3">
+                <p class="apple-iphone-pro">Apple iPhone 14 Pro 512GB Gold (MQ233)</p>
+                <div class="element">$1437</div>
+              </div>
+              <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="top-section"><div class="icon-like-5"></div></div>
+            <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+            <div class="text-icon">
+              <div class="div-3">
+                <div class="apple-iphone-pro">AirPods Max Silver<br />Starlight Aluminium</div>
+                <div class="element">$549</div>
+              </div>
+              <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="top-section"><div class="icon-like-5"></div></div>
+            <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+            <div class="text-icon">
+              <div class="div-3">
+                <p class="apple-iphone-pro">Apple Watch Series 9 GPS 41mm Starlight Aluminium</p>
+                <div class="element">$399</div>
+              </div>
+              <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="top-section"><div class="icon-like-6"></div></div>
+            <img class="iphone-pro-2" src="{% static 'Iphone 14 pro 1.png'%}" />
+            <div class="text-icon">
+              <div class="div-3">
+                <p class="apple-iphone-pro">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</p>
+                <div class="element">$1499</div>
+              </div>
+              <button class="div-wrapper"><div class="label-3">Buy Now</div></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="content-3">
+          <div class="titles-2">
+            <p class="big-summer-sale">
+              <span class="text-wrapper-24">Big Summer</span>
+              <span class="text-wrapper-25">&nbsp;</span>
+              <span class="text-wrapper-26">Sale</span>
+            </p>
+            <p class="text-wrapper-27">.</p>
+          </div>
+          <button class="button"><div class="label">Shop Now</div></button>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="info">
+          <div class="logo-text">
+            <div class="logo-wrapper"><img class="img" src="img/logo-2.svg" /></div>
+            <p class="text-wrapper-28">
+              We are a residential interior design firm located in Portland. Our boutique-studio offers more than
+            </p>
+          </div>
+          <div class="footer-navigation">
+            <div class="section">
+              <div class="text-wrapper-29">Services</div>
+              <div class="text-wrapper-30">Bonus program</div>
+              <div class="text-wrapper-30">Gift cards</div>
+              <div class="text-wrapper-30">Credit and payment</div>
+              <div class="text-wrapper-30">Service contracts</div>
+              <div class="text-wrapper-30">Non-cash account</div>
+              <div class="text-wrapper-30">Payment</div>
+            </div>
+            <div class="section">
+              <div class="text-wrapper-29">Assistance to the buyer</div>
+              <div class="text-wrapper-30">Find an order</div>
+              <div class="text-wrapper-30">Terms of delivery</div>
+              <p class="text-wrapper-30">Exchange and return of goods</p>
+              <div class="text-wrapper-30">Guarantee</div>
+              <div class="text-wrapper-30">Frequently asked questions</div>
+              <p class="text-wrapper-30">Terms of use of the site</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <img class="img-4" src="{% static 'twitter.svg'%}" />
+          <img class="img-4" src="{% static 'instagram.png'%}" />
+          <img class="img-4" src="{% static 'facebook.svg'%}" />
+          <img class="img-4" src="{% static 'tiktok.svg'%}" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

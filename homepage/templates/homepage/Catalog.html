@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Catalog.css' %}">
+  </head>
+  <body>
+    <div class="products-page">
+      <div class="header-top">
+        <div class="logo"><img class="img" src="img/logo.svg" /></div>
+        <div class="navbar">
+          <a href="{% url 'homepage:home' %}" class="text-wrapper-2">Home</a>
+          <a href="{% url 'homepage:catalog' %}" class="div">Catalog</a>
+          <div class="text-wrapper-2">About</div>
+          <div class="text-wrapper-2">Contact Us</div>
+        </div>
+        <div class="icons">
+          <img class="img" src="{% static 'Favorites.svg'%} " alt="favorites">
+          <a href="{% url 'homepage:cart' %}" class="icon-cart">
+            <img class="img" src="{% static 'cart.svg' %}" alt="cart">
+          </a>
+          <a href="{% url 'homepage:signup' %}">
+            <img class="img" src="{% static 'user.svg' %}" alt="user">
+          </a>
+        </div>
+      </div>
+      <div class="breadcrumbs">
+        <div class="text-wrapper-3">Home</div>
+        <img class="img" src="Arrow.svg" />
+        <div class="text-wrapper-3">Catalog</div>
+        <img class="img" src="Arrow.svg" />
+        <div class="text-wrapper-4">Smartphones</div>
+      </div>
+      <div class="content">
+        <div class="frame">
+          <div class="filters">
+            <div class="frame-2">
+              <div class="frame-wrapper">
+                <div class="frame-3">
+                  <div class="text-wrapper-5">Brand</div>
+                  <img class="img" src="{% static 'expand-less.svg'%} " />
+                </div>
+              </div>
+              <div class="search-brands">
+                <div class="search-field-2">
+                  <img class="img" src="{% static 'Search.svg'%} " />
+                  <div class="text-wrapper">Search</div>
+                </div>
+                <div class="brands">
+                  <div class="checbox-field">
+                    <img class="img-3" src="{% static 'Done_round.svg'%}" />
+                    <p class="apple"><span class="span">Apple </span> <span class="text-wrapper-6">110</span></p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="apple">
+                      <span class="span">Samsung</span>
+                      <span class="text-wrapper-7">&nbsp;</span>
+                      <span class="text-wrapper-6">125</span>
+                    </p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="apple">
+                      <span class="span">Xiaomi</span>
+                      <span class="text-wrapper-7">&nbsp;</span>
+                      <span class="text-wrapper-6">68</span>
+                    </p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="apple">
+                      <span class="span">Poco</span>
+                      <span class="text-wrapper-7">&nbsp;</span>
+                      <span class="text-wrapper-6">44</span>
+                    </p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="p">
+                      <span class="text-wrapper-8">OPPO</span>
+                      <span class="text-wrapper-9">&nbsp;</span>
+                      <span class="text-wrapper-10">36</span>
+                    </p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="apple"><span class="span">Honor </span> <span class="text-wrapper-6">10</span></p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="apple"><span class="span">Motorola </span> <span class="text-wrapper-6">34</span></p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="apple">
+                      <span class="span">Nokia</span>
+                      <span class="text-wrapper-7">&nbsp;</span>
+                      <span class="text-wrapper-6">22</span>
+                    </p>
+                  </div>
+                  <div class="checbox-field">
+                    <div class="done-round"></div>
+                    <p class="apple"><span class="span">Realme </span> <span class="text-wrapper-6">35</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper">
+              <div class="frame-3">
+                <div class="text-wrapper-5">Battery capacity</div>
+                <img class="img" src="img/expand-more-4.svg" />
+              </div>
+            </div>
+            <div class="frame-wrapper">
+              <div class="frame-3">
+                <div class="text-wrapper-5">Screen type</div>
+                <img class="img" src="img/expand-more-5.svg" />
+              </div>
+            </div>
+            <div class="frame-wrapper">
+              <div class="frame-3">
+                <div class="text-wrapper-5">Screen diagonal</div>
+                <img class="img" src="img/expand-more-2.svg" />
+              </div>
+            </div>
+            <div class="frame-wrapper">
+              <div class="frame-3">
+                <div class="text-wrapper-5">Protection class</div>
+                <img class="img" src="img/expand-more-3.svg" />
+              </div>
+            </div>
+            <div class="frame-wrapper">
+              <div class="frame-3">
+                <div class="text-wrapper-5">Built-in memory</div>
+                <img class="img" src="img/expand-more.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="products">
+              <div class="top-part">
+                <div class="left-side">
+                  <div class="text-wrapper-11">Selected Products:</div>
+                  <div class="text-wrapper-12">85</div>
+                </div>
+                <div class="dropdown">
+                  <div class="text-wrapper-13">By rating</div>
+                  <img class="img" src="img/chevron-down.svg" />
+                </div>
+              </div>
+              <div class="products">
+                <div class="row">
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 14 Pro 512GB Gold (MQ233)</p>
+                        <div class="text-wrapper-14">$1437</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-px-like"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 11 128GB White (MQ233)</p>
+                        <div class="text-wrapper-14">$510</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like-2"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 11 128GB White<br />(MQ233)</p>
+                        <div class="text-wrapper-14">$550</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like-3"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</p>
+                        <div class="text-wrapper-14">$1499</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like-4"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</p>
+                        <div class="text-wrapper-14">$1399</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like-5"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 14 Pro 128GB Deep Purple (MQ0G3)</p>
+                        <div class="text-wrapper-14">$1600</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like-6"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 13 mini 128GB Pink (MLK23)</p>
+                        <div class="text-wrapper-14">$850</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like-7"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 14 Pro 256GB Space Black (MQ0T3)</p>
+                        <div class="text-wrapper-14">$1399</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="top-section"><div class="icon-like-8"></div></div>
+                    <img class="iphone-pro" src="{% static 'Iphone 14 pro Gold.svg'%}" />
+                    <div class="text-icon">
+                      <div class="info">
+                        <p class="apple-iphone-pro">Apple iPhone 14 Pro 256GB Silver (MQ103)</p>
+                        <div class="text-wrapper-14">$1399</div>
+                      </div>
+                      <a href="{% url 'homepage:productdetails' %}" class="button">
+                        <div class="label">View details</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <img class="img" src="{% static 'Arrow left.svg'%} " />
+              <div class="page-numbers">
+                <div class="element"><div class="text-wrapper-15">1</div></div>
+                <div class="element-wrapper"><div class="element-2">2</div></div>
+                <div class="element-wrapper"><div class="element-2">3</div></div>
+                <div class="div-2">
+                  <div class="ellipse"></div>
+                  <div class="ellipse"></div>
+                  <div class="ellipse"></div>
+                  <div class="ellipse"></div>
+                </div>
+                <div class="element-wrapper"><div class="element-2">12</div></div>
+              </div>
+              <img class="img" src="{% static 'arrow.svg'%} " />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="info-2">
+          <div class="logo-text">
+            <div class="logo"><img class="img-3" src="img/logo.svg" /></div>
+            <p class="text-wrapper-16">
+              We are a residential interior design firm located in Portland. Our boutique-studio offers more than
+            </p>
+          </div>
+          <div class="footer-navigation">
+            <div class="section">
+              <div class="text-wrapper-17">Services</div>
+              <div class="text-wrapper-18">Bonus program</div>
+              <div class="text-wrapper-18">Gift cards</div>
+              <div class="text-wrapper-18">Credit and payment</div>
+              <div class="text-wrapper-18">Service contracts</div>
+              <div class="text-wrapper-18">Non-cash account</div>
+              <div class="text-wrapper-18">Payment</div>
+            </div>
+            <div class="section">
+              <div class="text-wrapper-17">Assistance to the buyer</div>
+              <div class="text-wrapper-18">Find an order</div>
+              <div class="text-wrapper-18">Terms of delivery</div>
+              <p class="text-wrapper-18">Exchange and return of goods</p>
+              <div class="text-wrapper-18">Guarantee</div>
+              <div class="text-wrapper-18">Frequently asked questions</div>
+              <p class="text-wrapper-18">Terms of use of the site</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <img class="img-4" src="{% static 'twitter.svg'%}" />
+          <img class="img-4" src="{% static 'facebook.svg'%}" />
+          <img class="img-4" src="{% static 'tiktok.svg' %}" />
+          <img class="img-4" src="{% static 'instagram.png'%}" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

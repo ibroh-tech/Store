@@ -1,0 +1,320 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sign-in {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.sign-in .frame-wrapper {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1016px;
+  position: relative;
+}
+
+.sign-in .frame {
+  display: inline-flex;
+  flex-direction: column;
+  height: 590px;
+  align-items: flex-start;
+  gap: 1px;
+  padding: 40px;
+  position: relative;
+  top: 149px;
+  left: 462px;
+  background-color: #0e0e0f;
+  border-radius: 24px;
+  border: none;
+}
+
+.sign-in .frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sign-in .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 436px;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.sign-in .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 40.0px;
+}
+
+.sign-in .div {
+  display: flex;
+  flex-direction: column;
+  width: 436px;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.sign-in .frame-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.sign-in .frame-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff33;
+}
+
+.sign-in .img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.sign-in .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Be Vietnam Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.sign-in .frame-4 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.sign-in .line {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  height: 1px;
+}
+
+.sign-in .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffffb8;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20.0px;
+  white-space: nowrap;
+}
+
+.sign-in .frame-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.sign-in .frame-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.sign-in .text-wrapper-4 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.sign-in .frame-7 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  position: relative;
+  border: 1px solid #ffffff33; /* Border added */
+  border-radius: 12px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff1a;
+}
+
+.sign-in .frame-7 input {
+  width: 100%;
+  padding: 10px; /* Fixed padding issue */
+  background-color: transparent;
+  border: none;
+  color: #ffffffb8;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.sign-in .frame-7 input::placeholder {
+  color: #ffffffb8;
+}
+
+.sign-in .frame-7 input:focus {
+  outline: none;
+}
+
+.sign-in .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffffb8;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.sign-in .text-wrapper-6 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffffb8;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24.0px;
+}
+
+.sign-in .p {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffffb8;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.sign-in .frame-8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.sign-in .text-wrapper-7 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Be Vietnam Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.sign-in .text-wrapper-8 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffffb8;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24.0px;
+}
